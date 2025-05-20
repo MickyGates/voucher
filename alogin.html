@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Successful</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="refresh" content="0;url=https://www.google.com">
+
+    <meta name="author" content="Ringroad">
+
+    <meta name="theme-color" content="#9831e0"> <meta name="msapplication-navbutton-color" content="#9831e0"> <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#9831e0"> <link rel="icon" href="img/favicon.png" type="image/png">
+
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif; /* Defaulting to Inter font */
+        }
+    </style>
+
+    <script type="text/javascript">
+        // Function to attempt redirection via JavaScript
+        function redirectUser() {
+            // The conditional logic `$(if popup == 'true')` and `$(endif)`
+            // is not standard JavaScript. It seems like server-side template syntax.
+            // If you need conditional redirection based on a JavaScript variable,
+            // it should be implemented differently.
+
+            // For a direct redirect:
+            window.location.href = 'https://www.google.com';
+
+            // Example of conditional logic (if you had a JS variable `shouldOpenPopup`):
+            /*
+            var shouldOpenPopup = false; // or true, based on some condition
+            if (shouldOpenPopup) {
+                // Opening popups is often blocked by browsers and can be intrusive.
+                // Consider alternatives if possible.
+                window.open('https://www.google.com', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubar=0,resizable=1,width=290,height=400');
+            }
+            // Always redirect the main window as a fallback or primary action
+            window.location.href = 'https://www.google.com';
+            */
+        }
+    </script>
+</head>
+<body onload="redirectUser()" class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-6 text-center">
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full">
+        <h1 class="text-3xl font-bold text-purple-600 mb-4">Login Successful!</h1>
+        <p class="text-gray-700 mb-6">
+            You are being redirected to Google.
+        </p>
+        <p class="text-gray-600 text-sm">
+            If the page does not redirect automatically,
+            <a href="https://www.google.com" class="text-purple-600 hover:text-purple-800 underline font-semibold">click here</a>.
+        </p>
+        <img src="img/favicon.png" alt="Favicon" style="display:none;" onerror="this.style.display='none'; console.warn('Favicon not found at img/favicon.png')">
+    </div>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Login Successfull</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="https://www.google.com">
+    <meta name="Author" content="Ringroad">
+    <!-- Untuk Chrome & Opera -->
+    <meta name="theme-color" content="#9831e0">
+    <!-- Untuk Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#9831e0">
+    <!-- Untuk Safari iOS -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#9831e0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script language="JavaScript">function startClock() {
+        $(if popup == 'true')open('https://www.google.com', 'hotspot_status', 'toolbar=0,location=0,directories=0,status=0,menubars=0,resizable=1,width=290');
+        $(endif)location.href = 'https://www.google.com';
+      }
+    </script>
+</head>
+<body onload="startClock(10)">
+</body>
+</html>

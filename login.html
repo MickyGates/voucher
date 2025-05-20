@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="Author" content="micky">
+    <meta name="theme-color" content="#FF0000">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="msapplication-navbutton-color" content="#FF0000">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#FF0000">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="img/favicon.png">
+    <title>Innova TechSpark - Login</title>
+    <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css" type="text/css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://cdn.ably.io/lib/ably.min-1.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+</head>
+<body>
+    <div class="loading-dialog" id="loadingDialog">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <div class="loading-message"></div>
+            <div class="loading-status" id="loadingStatus"></div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="login-container">
+            <div class="wifi-icon">
+                <div class="wifi-wave"></div>
+                <div class="wifi-wave"></div>
+                <div class="wifi-wave"></div>
+            </div>
+            <h2 class="login-header">Micky's Wifi</h2>
+            <h2 style="color: var(--primary-color); text-align: center; margin: 20px 0;">Purchase Voucher Code for hotspot internet</h2>
+            <form id="loginvcr" name="loginvcr" action="$(link-login-only)" method="post" autocomplete="off">
+                <input type="hidden" name="popup" value="true" />
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" placeholder="Enter Voucher Code" id="uservcr" required />
+                    <input type="hidden" name="password" id="passvcr" />
+                </div>
+                <div class="ip-info">
+                    IP: $(ip) | MAC: $(mac)
+                </div>
+                <button type="submit" class="btn-connect">
+                    <i class="fas fa-sign-in-alt"></i> LOGIN
+                </button>
+            </form>
+
+            <div class="package-section">
+                <h3 style="color: #fff; text-align: center; margin: 20px 0;">BUY A PACKAGE</h3>
+                <div style="text-align: center; margin: 15px 0; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    <span>Pay With</span> <img src="img/mobile_money.png" alt="Airtel Money" style="height: 60px; width: auto; object-fit: contain;">
+                </div>
+                <div class="package-buttons">
+                    <button type="button" class="package-btn"> 1hr UGX 500 <span class="buy-btn" onclick="showPaymentDialog('1hr', '500', '1h')">BUY</span></button>
+                    <button type="button" class="package-btn"> 12hr UGX 1,000 <span class="buy-btn" onclick="showPaymentDialog('12hr', '1000', '12h')">BUY</span></button>
+                    <button type="button" class="package-btn">Daily 24hrs UGX 1,000 <span class="buy-btn" onclick="showPaymentDialog('24hrs', '1000', '1d')">BUY</span></button>
+                    <button type="button" class="package-btn">WEEKLY OFFER UGX 6,000<span class="buy-btn" onclick="showPaymentDialog('Weekly', '6000', '1w')">BUY</span></button>
+                    <button type="button" class="package-btn">Monthly UGX 22,000<span class="buy-btn" onclick="showPaymentDialog('Monthly', '22000', '4w')">BUY</span></button>
+                </div>
+            </div>
+
+            <p class="wifi-info" align="center">For Assistance Call +256706090231 or +25676090231</p>
+            <p class="wifi-info" align="center">This application is designed and Configured by Micheal +25676090231</p>
+        </div>
+    </div>
+
+    <!-- Payment Dialog -->
+    <div class="payment-dialog-backdrop" id="paymentBackdrop"></div>
+    <div class="payment-dialog" id="paymentDialog">
+        <div class="payment-dialog-header">
+            <h3 id="paymentDialogTitle">Package Payment</h3>
+        </div>
+        <div class="payment-dialog-content">
+            <div class="amount-display">
+                UGX <span id="amountDisplay">0</span>
+                - Uptime: <span id="uptime"></span>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Enter Mobile Money Number:</label>
+                <input type="tel" id="phoneNumber" placeholder="e.g., 0753624160" required>
+            </div>
+        </div>
+        <div class="payment-dialog-buttons">
+            <button class="cancel" onclick="hidePaymentDialog()">Cancel</button>
+            <button class="pay" onclick="makePayment()">Pay Now</button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/256706090231" class="whatsapp-button">
+        <img src="img/whatsapp_icon.png" alt="WhatsApp">
+    </a>
+
+    <script src="js/menu.js"></script>
+    <script src="js/payment.js"></script>
+</body>
+</html>
