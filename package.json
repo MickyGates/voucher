@@ -1,0 +1,25 @@
+{
+  "name": "innova-techspark-app",
+  "version": "1.0.0",
+  "description": "Cross-platform application for Innova TechSpark",
+  "main": "public/electron.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "package": "electron-builder --win --mac --linux"
+  },
+  "keywords": [
+    "electron",
+    "cross-platform",
+    "innova",
+    "techspark"
+  ],
+  "author": "Paul",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^latest"
+  },
+  "devDependencies": {
+    "electron-builder": "^latest"
+  }
+}
