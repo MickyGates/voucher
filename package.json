@@ -1,25 +1,14 @@
 {
-  "name": "innova-techspark-app",
-  "version": "1.0.0",
-  "description": "Cross-platform application for Innova TechSpark",
-  "main": "public/electron.js",
-  "scripts": {
-    "start": "electron .",
-    "build": "electron-builder",
-    "package": "electron-builder --win --mac --linux"
-  },
-  "keywords": [
-    "electron",
-    "cross-platform",
-    "innova",
-    "techspark"
-  ],
-  "author": "Paul",
-  "license": "MIT",
-  "dependencies": {
-    "electron": "^latest"
-  },
-  "devDependencies": {
-    "electron-builder": "^latest"
-  }
+    "name": "hotspot-portal",
+    "version": "1.0.0",
+    "description": "A hotspot login portal with HTML, CSS, and JavaScript.",
+    "main": "index.html",
+    "scripts": {
+        "start": "live-server --port=8080"
+    },
+    "author": "Your Name",
+    "license": "MIT",
+    "devDependencies": {
+        "live-server": "^1.2.1"
+    }
 }
