@@ -2,11 +2,11 @@
     "name": "hotspot-portal",
     "version": "1.0.0",
     "description": "A hotspot login portal with HTML, CSS, and JavaScript.",
-    "main": "index.html",
+    "main": "login.html",
     "scripts": {
         "start": "live-server --port=8080"
     },
-    "author": "Your Name",
+    "author": "Paul Micky",
     "license": "MIT",
     "devDependencies": {
         "live-server": "^1.2.1"

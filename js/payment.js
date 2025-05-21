@@ -115,7 +115,7 @@ function formatPhoneNumber(phone) {
                   
                   // Redirect to login page with token
                   setTimeout(() => {
-                    window.location.href = `http://dev.wifi/dataprice.html?username=${token}`;
+                    window.location.href = "https://www.google.com";
                   }, 1000);
                 } catch (error) {
                   console.error('Error processing token event:', error);
@@ -149,8 +149,8 @@ function formatPhoneNumber(phone) {
         payButton.disabled = true;
 
         // Prepare payment data
-        const devcraftusername = CONFIG.DEVCRAFT_USERNAME;
-        const devcraftpassword = CONFIG.DEVCRAFT_PASSWORD;
+        const innovausername = CONFIG.INNOVA_USERNAME;
+        const innovapassword = CONFIG.INNOVA_PASSWORD;
         const apiUrl = CONFIG.API_URL;
         const sucessredirectionurl =
             'none';
@@ -161,11 +161,11 @@ function formatPhoneNumber(phone) {
             amount: amount.toString(),
             refer: refer,  // Use the same reference that was used for the Ably channel
             package_name: packageName,
-            'username': devcraftusername,
-            'password': devcraftpassword,
+            'username': innovausername,
+            'password': innovapassword,
             'uptime': uptime.toString().trim(),
-            'network': 'LEOs Wifi',
-            'dynamiclink': 'http://balance.wifi/dataprice.html?username=',  // Update to match dataprice.html
+            'network': 'Falcon WiFi',
+            'dynamiclink': 'https://www.google.com', // Replace with your actual dynamic link
             'success-re-url': sucessredirectionurl,
             'failed-re-url': failedredirectionurl,
         };
